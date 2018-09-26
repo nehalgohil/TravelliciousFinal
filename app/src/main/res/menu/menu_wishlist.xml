@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.MainActivity">
+
+    <item
+        android:id="@+id/request_callback"
+        android:title="Request Call back" />
+    <item
+        android:id="@+id/send_qury"
+        android:title="Send a query" />
+    <item
+        android:id="@+id/help"
+        android:title="Need Help? Call Us!"
+        app:showAsAction="withText" />
+    <item
+
+        android:id="@+id/wish"
+        android:icon="@drawable/ic_heart_outline"
+        android:title="Share"
+        app:showAsAction="always"
+        />
+
+    <!--<item
+        android:id="@+id/share"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Share"
+        app:showAsAction="always"
+        tools:ignore="AppCompatResource" />-->
+</menu>

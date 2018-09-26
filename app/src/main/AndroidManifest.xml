@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dolphinwebsolution.travellcious">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.Home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.Sub_category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Package_Alldetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Contact_Us"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Activity.Package_slider" />
+        <activity
+            android:name=".Activity.Request_callBack"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activity.Send_query"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Activity.BestSelling_viewAll" />
+        <activity android:name=".Activity.MyAccount" />
+        <activity
+            android:name=".Activity.ChangePassword"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activity.MyProfile"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Activity.My_Wishlist" />
+        <activity
+            android:name=".Activity.Customize_package_activity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Activity.Customize_quote_second"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Activity.ViewAll_Location" />
+        <activity android:name=".Activity.Review_viewAll" />
+        <activity android:name=".Activity.Review_details" />
+        <activity android:name=".Activity.Package_name" />
+        <activity android:name=".Activity.Package_image_gridview"></activity>
+    </application>
+
+</manifest>

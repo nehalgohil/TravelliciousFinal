@@ -1,0 +1,1613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ProgressBar
+        android:id="@+id/pd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lv_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="14">
+
+                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp">
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="bottom"
+                        app:ci_drawable="@drawable/circle_selected"
+                        app:ci_drawable_unselected="@drawable/circle_unselected" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/cat_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.3"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtdesti"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="start|center"
+                                android:padding="5dp"
+                                android:text="Destination For You"
+                                android:textColor="@color/Black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="2.5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_desti_viewall"
+                                android:layout_width="95dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end|center"
+                                android:background="@drawable/btn_orange_stroke"
+                                android:gravity="center"
+                                android:text="View All"
+                                android:textAllCaps="false"
+                                android:textColor="@color/Black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.7"
+                        android:orientation="vertical">
+
+                        <!--
+                                                <HorizontalScrollView
+                                                    android:id="@+id/horizontalscrollView"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:scrollbars="none">
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:orientation="horizontal"
+                                                        android:weightSum="4">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2"
+                                                            android:orientation="vertical">
+
+                                                            <RelativeLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content">
+
+                                                                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                                    xmlns:tools="http://schemas.android.com/tools"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_gravity="center"
+                                                                    android:layout_margin="10dp"
+                                                                    app:cardBackgroundColor="@color/white"
+                                                                    app:cardCornerRadius="5dp"
+                                                                    app:cardElevation="5dp">
+
+                                                                    <LinearLayout
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="match_parent"
+                                                                        android:orientation="vertical">
+
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:orientation="vertical">
+
+                                                                            <ImageView
+                                                                                android:id="@+id/imgdesitwo"
+                                                                                android:layout_width="wrap_content"
+                                                                                android:layout_height="130dp"
+                                                                                android:gravity="center"
+                                                                                android:scaleType="fitXY" />
+
+
+                                                                        </LinearLayout>
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_margin="5dp"
+                                                                            android:layout_marginBottom="25dp"
+                                                                            android:orientation="horizontal"
+                                                                            android:weightSum="4">
+
+                                                                            <LinearLayout
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="match_parent"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:layout_weight="1.5"
+                                                                                android:orientation="vertical">
+
+                                                                                <TextView
+                                                                                    android:id="@+id/txtpacknm"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_gravity="center"
+                                                                                    android:ellipsize="end"
+                                                                                    android:maxLines="1"
+                                                                                    android:text="Thiland"
+                                                                                    android:textColor="@color/Black"
+                                                                                    android:textSize="14sp" />
+
+                                                                                <TextView
+                                                                                    android:id="@+id/txtdesc"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_marginBottom="10dp"
+                                                                                    android:ellipsize="end"
+                                                                                    android:gravity="center|start"
+                                                                                    android:maxLines="1"
+                                                                                    android:text="Contray of popular people"
+                                                                                    android:textColor="@color/Gray"
+                                                                                    android:textSize="10dp" />
+
+
+                                                                            </LinearLayout>
+
+                                                                            <LinearLayout
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="match_parent"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:layout_weight="2.5"
+                                                                                android:orientation="vertical">
+
+                                                                                <TextView
+                                                                                    android:id="@+id/txtbudget"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="match_parent"
+                                                                                    android:layout_gravity="start"
+                                                                                    android:layout_weight="2"
+                                                                                    android:gravity="end"
+                                                                                    android:text="₹ 9999/-"
+                                                                                    android:textColor="@color/rs"
+                                                                                    android:textSize="16sp" />
+
+                                                                            </LinearLayout>
+                                                                        </LinearLayout>
+                                                                    </LinearLayout>
+                                                                </android.support.v7.widget.CardView>
+
+                                                            </RelativeLayout>
+
+                                                            <LinearLayout
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginTop="-28dp"
+                                                                android:orientation="vertical">
+
+                                                                <Button
+                                                                    android:id="@+id/btn_vmore"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="30dp"
+                                                                    android:layout_centerHorizontal="true"
+                                                                    android:layout_gravity="center"
+                                                                    android:layout_marginLeft="140dp"
+                                                                    android:layout_marginRight="72dp"
+                                                                    android:background="@drawable/btn_ripple"
+                                                                    android:text="View More"
+                                                                    android:textAllCaps="false"
+                                                                    android:textColor="@color/primary_light"
+                                                                    android:textSize="12sp" />
+                                                            </LinearLayout>
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="2"
+                                                            android:orientation="vertical">
+
+                                                            <RelativeLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content">
+
+                                                                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                                    xmlns:tools="http://schemas.android.com/tools"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_gravity="center"
+                                                                    android:layout_margin="10dp"
+                                                                    app:cardBackgroundColor="@color/white"
+                                                                    app:cardCornerRadius="5dp"
+                                                                    app:cardElevation="5dp">
+
+                                                                    <LinearLayout
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="match_parent"
+                                                                        android:orientation="vertical">
+
+
+                                                                        <LinearLayout
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_margin="5dp"
+                                                                            android:layout_marginBottom="25dp"
+                                                                            android:orientation="horizontal"
+                                                                            android:weightSum="4">
+
+                                                                            <LinearLayout
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="match_parent"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:layout_weight="1.5"
+                                                                                android:orientation="vertical">
+
+                                                                                <TextView
+                                                                                    android:id="@+id/txtpacktwo"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_gravity="center"
+                                                                                    android:ellipsize="end"
+                                                                                    android:maxLines="1"
+                                                                                    android:text="Thiland"
+                                                                                    android:textColor="@color/Black"
+                                                                                    android:textSize="14sp" />
+
+                                                                                <TextView
+                                                                                    android:id="@+id/txtdescritwo"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_marginBottom="10dp"
+                                                                                    android:ellipsize="end"
+                                                                                    android:gravity="center|start"
+                                                                                    android:maxLines="1"
+                                                                                    android:text="Contray of popular people"
+                                                                                    android:textColor="@color/Gray"
+                                                                                    android:textSize="10dp" />
+
+
+                                                                            </LinearLayout>
+
+                                                                            <LinearLayout
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="match_parent"
+                                                                                android:layout_marginTop="5dp"
+                                                                                android:layout_weight="2.5"
+                                                                                android:orientation="vertical">
+
+                                                                                <TextView
+                                                                                    android:id="@+id/txtbudgettwo"
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="match_parent"
+                                                                                    android:layout_gravity="start"
+                                                                                    android:layout_weight="2"
+                                                                                    android:gravity="end"
+                                                                                    android:text="₹ 9999/-"
+                                                                                    android:textColor="@color/rs"
+                                                                                    android:textSize="16sp" />
+
+                                                                            </LinearLayout>
+                                                                        </LinearLayout>
+                                                                    </LinearLayout>
+                                                                </android.support.v7.widget.CardView>
+
+                                                            </RelativeLayout>
+
+                                                            <LinearLayout
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_marginTop="-28dp"
+                                                                android:orientation="vertical">
+
+                                                                <Button
+                                                                    android:id="@+id/btn_vmoretwo"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="30dp"
+                                                                    android:layout_centerHorizontal="true"
+                                                                    android:layout_gravity="center"
+                                                                    android:layout_marginLeft="140dp"
+                                                                    android:layout_marginRight="72dp"
+                                                                    android:background="@drawable/btn_ripple"
+                                                                    android:text="View More"
+                                                                    android:textAllCaps="false"
+                                                                    android:textColor="@color/primary_light"
+                                                                    android:textSize="12sp" />
+                                                            </LinearLayout>
+
+                                                        </LinearLayout>
+
+                                                    </LinearLayout>
+                                                </HorizontalScrollView>
+                        -->
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/desti_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:orientation="horizontal" />
+
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/cardview_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:visibility="gone"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="5dp">
+
+                            <TextView
+                                android:id="@+id/txt_msg_desti"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="Data Not Found"
+                                android:textSize="16sp" />
+
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtvac"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="start|center"
+                                android:padding="5dp"
+                                android:text="Top Vacation Destinations"
+                                android:textColor="@color/Black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Button
+                                android:id="@+id/btn_vac_viewAll"
+                                android:layout_width="95dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end"
+                                android:background="@drawable/btn_orange_stroke"
+                                android:text="View all"
+                                android:textAllCaps="false"
+                                android:textColor="@color/Orange"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:orientation="horizontal">
+
+                        <!--
+                                                                        <HorizontalScrollView
+                                                                            android:id="@+id/horizontalscrollView1"
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="match_parent"
+                                                                            android:scrollbars="none">
+
+                                                                            <LinearLayout
+                                                                                android:layout_width="match_parent"
+                                                                                android:layout_height="match_parent"
+                                                                                android:orientation="horizontal"
+                                                                                android:weightSum="4">
+
+                                                                                <LinearLayout
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="match_parent"
+                                                                                    android:layout_marginRight="5dp"
+                                                                                    android:layout_weight="2"
+                                                                                    android:orientation="vertical">
+
+                                                                                    <android.support.v7.widget.CardView
+                                                                                        android:layout_width="match_parent"
+                                                                                        android:layout_height="match_parent"
+                                                                                        android:layout_margin="1dp"
+                                                                                        app:cardBackgroundColor="#fcfcfc"
+                                                                                        app:cardCornerRadius="4dp"
+                                                                                        app:cardElevation="3dp">
+
+                                                                                        <LinearLayout
+                                                                                            android:layout_width="match_parent"
+                                                                                            android:layout_height="match_parent"
+                                                                                            android:layout_marginBottom="10dp"
+                                                                                            android:orientation="vertical"
+                                                                                            android:weightSum="4">
+
+                                                                                            <LinearLayout
+                                                                                                android:layout_width="match_parent"
+                                                                                                android:layout_height="match_parent"
+                                                                                                android:layout_weight="1.5"
+                                                                                                android:orientation="vertical">
+
+                                                                                                <ImageView
+                                                                                                    android:id="@+id/img_vacation"
+                                                                                                    android:layout_width="300dp"
+                                                                                                    android:layout_height="130dp"
+                                                                                                    android:gravity="center"
+                                                                                                    android:scaleType="fitXY"
+                                                                                                    android:src="@drawable/download" />
+
+
+                                                                                            </LinearLayout>
+
+                                                                                            <LinearLayout
+                                                                                                android:layout_width="match_parent"
+                                                                                                android:layout_height="match_parent"
+                                                                                                android:layout_margin="5dp"
+                                                                                                android:layout_weight="2.5"
+                                                                                                android:orientation="horizontal"
+                                                                                                android:weightSum="4">
+
+                                                                                                <LinearLayout
+                                                                                                    android:layout_width="match_parent"
+                                                                                                    android:layout_height="match_parent"
+                                                                                                    android:layout_weight="2"
+                                                                                                    android:orientation="vertical">
+
+                                                                                                    <TextView
+                                                                                                        android:id="@+id/txt_vac_title"
+                                                                                                        android:layout_width="match_parent"
+                                                                                                        android:layout_height="wrap_content"
+                                                                                                        android:layout_gravity="center"
+                                                                                                        android:layout_marginTop="5dp"
+                                                                                                        android:ellipsize="end"
+                                                                                                        android:gravity="center|start"
+                                                                                                        android:maxLines="1"
+                                                                                                        android:text="Carela"
+                                                                                                        android:textColor="@color/main"
+                                                                                                        android:textSize="14sp"
+                                                                                                        android:textStyle="bold" />
+
+                                                                                                    <TextView
+                                                                                                        android:layout_width="match_parent"
+                                                                                                        android:layout_height="wrap_content"
+                                                                                                        android:layout_gravity="start"
+                                                                                                        android:layout_marginTop="10dp"
+                                                                                                        android:gravity="start|center"
+                                                                                                        android:text="Starting Budget"
+                                                                                                        android:textColor="@color/sub"
+                                                                                                        android:textSize="12sp" />
+
+                                                                                                    <TextView
+                                                                                                        android:id="@+id/txt_vac_budget"
+                                                                                                        android:layout_width="match_parent"
+                                                                                                        android:layout_height="wrap_content"
+                                                                                                        android:layout_marginTop="5dp"
+                                                                                                        android:gravity="center|start"
+                                                                                                        android:text="₹ 9999/-"
+                                                                                                        android:textColor="@color/rs"
+                                                                                                        android:textSize="14sp" />
+                                                                                                </LinearLayout>
+
+                                                                                                <LinearLayout
+                                                                                                    android:layout_width="match_parent"
+                                                                                                    android:layout_height="match_parent"
+                                                                                                    android:layout_gravity="center"
+                                                                                                    android:layout_marginTop="10dp"
+                                                                                                    android:layout_weight="2"
+                                                                                                    android:gravity="center"
+                                                                                                    android:orientation="vertical">
+
+
+                                                                                                    <Button
+                                                                                                        android:id="@+id/btn_vac_vmore"
+                                                                                                        android:layout_width="wrap_content"
+                                                                                                        android:layout_height="25dp"
+                                                                                                        android:layout_gravity="end"
+                                                                                                        android:background="@drawable/roundbtn"
+                                                                                                        android:gravity="center|bottom"
+                                                                                                        android:padding="5dp"
+                                                                                                        android:text="View More"
+                                                                                                        android:textColor="@color/primary_light"
+                                                                                                        android:textSize="10dp" />
+
+
+                                                                                                </LinearLayout>
+                                                                                            </LinearLayout>
+                                                                                        </LinearLayout>
+                                                                                    </android.support.v7.widget.CardView>
+                                                                                </LinearLayout>
+
+                                                                                <LinearLayout
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="match_parent"
+                                                                                    android:layout_marginLeft="5dp"
+                                                                                    android:layout_weight="2"
+                                                                                    android:orientation="vertical">
+
+                                                                                    <android.support.v7.widget.CardView
+                                                                                        android:layout_width="match_parent"
+                                                                                        android:layout_height="match_parent"
+                                                                                        android:layout_margin="1dp"
+                                                                                        app:cardBackgroundColor="#fcfcfc"
+                                                                                        app:cardCornerRadius="4dp"
+                                                                                        app:cardElevation="3dp">
+
+                                                                                        <LinearLayout
+                                                                                            android:layout_width="match_parent"
+                                                                                            android:layout_height="match_parent"
+                                                                                            android:layout_marginBottom="10dp"
+                                                                                            android:orientation="vertical"
+                                                                                            android:weightSum="4">
+
+                                                                                            <LinearLayout
+                                                                                                android:layout_width="match_parent"
+                                                                                                android:layout_height="match_parent"
+                                                                                                android:layout_weight="1.5"
+                                                                                                android:orientation="vertical">
+
+                                                                                                <ImageView
+                                                                                                    android:id="@+id/img_vacationtwo"
+                                                                                                    android:layout_width="300dp"
+                                                                                                    android:layout_height="130dp"
+                                                                                                    android:gravity="center"
+                                                                                                    android:scaleType="fitXY"
+                                                                                                    android:src="@drawable/download" />
+
+
+                                                                                            </LinearLayout>
+
+                                                                                            <LinearLayout
+                                                                                                android:layout_width="match_parent"
+                                                                                                android:layout_height="match_parent"
+                                                                                                android:layout_margin="5dp"
+                                                                                                android:layout_weight="2.5"
+                                                                                                android:orientation="horizontal"
+                                                                                                android:weightSum="4">
+
+                                                                                                <LinearLayout
+                                                                                                    android:layout_width="match_parent"
+                                                                                                    android:layout_height="match_parent"
+                                                                                                    android:layout_weight="2"
+                                                                                                    android:orientation="vertical">
+
+                                                                                                    <TextView
+                                                                                                        android:id="@+id/txt_vac_titletwo"
+                                                                                                        android:layout_width="match_parent"
+                                                                                                        android:layout_height="wrap_content"
+                                                                                                        android:layout_gravity="center"
+                                                                                                        android:layout_marginTop="5dp"
+                                                                                                        android:ellipsize="end"
+                                                                                                        android:gravity="center|start"
+                                                                                                        android:maxLines="1"
+                                                                                                        android:text="Carela"
+                                                                                                        android:textColor="@color/main"
+                                                                                                        android:textSize="14sp"
+                                                                                                        android:textStyle="bold" />
+
+                                                                                                    <TextView
+                                                                                                        android:layout_width="match_parent"
+                                                                                                        android:layout_height="wrap_content"
+                                                                                                        android:layout_gravity="start"
+                                                                                                        android:layout_marginTop="10dp"
+                                                                                                        android:gravity="start|center"
+                                                                                                        android:text="Starting Budget"
+                                                                                                        android:textColor="@color/sub"
+                                                                                                        android:textSize="12sp" />
+
+                                                                                                    <TextView
+                                                                                                        android:id="@+id/txt_vac_budgettwo"
+                                                                                                        android:layout_width="match_parent"
+                                                                                                        android:layout_height="wrap_content"
+                                                                                                        android:layout_marginTop="5dp"
+                                                                                                        android:gravity="center|start"
+                                                                                                        android:text="₹ 9999/-"
+                                                                                                        android:textColor="@color/rs"
+                                                                                                        android:textSize="14sp" />
+                                                                                                </LinearLayout>
+
+                                                                                                <LinearLayout
+                                                                                                    android:layout_width="match_parent"
+                                                                                                    android:layout_height="match_parent"
+                                                                                                    android:layout_gravity="center"
+                                                                                                    android:layout_marginTop="10dp"
+                                                                                                    android:layout_weight="2"
+                                                                                                    android:gravity="center"
+                                                                                                    android:orientation="vertical">
+
+
+                                                                                                    <Button
+                                                                                                        android:id="@+id/btn_vac_vmoretwo"
+                                                                                                        android:layout_width="wrap_content"
+                                                                                                        android:layout_height="25dp"
+                                                                                                        android:layout_gravity="end"
+                                                                                                        android:background="@drawable/roundbtn"
+                                                                                                        android:gravity="center|bottom"
+                                                                                                        android:padding="5dp"
+                                                                                                        android:text="View More"
+                                                                                                        android:textColor="@color/primary_light"
+                                                                                                        android:textSize="12sp" />
+
+
+                                                                                                </LinearLayout>
+                                                                                            </LinearLayout>
+                                                                                        </LinearLayout>
+                                                                                    </android.support.v7.widget.CardView>
+                                                                                </LinearLayout>
+
+
+                                                                            </LinearLayout>
+                                                                        </HorizontalScrollView>
+                        -->
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/vac_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:orientation="horizontal" />
+
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/cardview_vaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:visibility="gone"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="5dp">
+
+                            <TextView
+                                android:id="@+id/txt_msg_vaction"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="Data Not Found"
+                                android:textSize="16sp" />
+
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_travel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:text="Why Travel with us?"
+                            android:textColor="@color/Black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="#fcfcfc"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/right" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txt_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="13dp"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:padding="3dp"
+                                        android:text="BEST PRICE GUATANTEE"
+                                        android:textColor="@color/primary_text"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/txt_detailtwo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:maxLines="3"
+                                        android:padding="3dp"
+                                        android:text="I need some help with Android UI design, I need to make rounded corner for the split action bar (that is the bottom part of an action bar)"
+                                        android:textColor="@color/Gray"
+                                        android:textSize="10dp" />
+
+                                    <TextView
+                                        android:id="@+id/txt_know"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:padding="3dp"
+                                        android:text="Know More"
+                                        android:textColor="@color/Link_text_color"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:padding="3dp">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="#fcfcfc"
+                                app:cardCornerRadius="4dp"
+                                app:cardElevation="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:padding="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/right" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txt_veri_agent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="13dp"
+                                        android:padding="3dp"
+                                        android:text="VERIFIED AGENTS"
+                                        android:textColor="@color/main"
+                                        android:textSize="12dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txt_detail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="2dp"
+                                        android:maxLines="3"
+                                        android:padding="3dp"
+                                        android:text="I need some help with Android UI design, I need to make rounded corner for the split action bar (that is the bottom part of an action bar)"
+                                        android:textColor="@color/sub"
+                                        android:textSize="10dp" />
+
+                                    <TextView
+                                        android:id="@+id/txt_know_more"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:padding="3dp"
+                                        android:text="Know More"
+                                        android:textColor="@color/Link_text_color"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.7"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:weightSum="4"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txthoney"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="start|center"
+                                android:padding="5dp"
+                                android:text="Top Honeymoon Destinations"
+                                android:textColor="@color/main"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.7"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Button
+                                android:id="@+id/btn_honey_viewAll"
+                                android:layout_width="95dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end"
+                                android:background="@drawable/btn_orange_stroke"
+                                android:elevation="15dp"
+                                android:text="View All"
+                                android:textAllCaps="false"
+                                android:textColor="@color/Orange"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.3"
+                        android:orientation="vertical">
+
+                        <!--<HorizontalScrollView
+                            android:id="@+id/horizontalscrollView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <android.support.v7.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="1dp"
+                                        app:cardBackgroundColor="#fcfcfc"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="3dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginBottom="10dp"
+                                            android:orientation="vertical"
+                                            android:weightSum="4">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.5"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:id="@+id/img_honeydesti"
+                                                    android:layout_width="300dp"
+                                                    android:layout_height="130dp"
+                                                    android:gravity="center"
+                                                    android:scaleType="fitXY"
+                                                    android:src="@drawable/download" />
+
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight="2.5"
+                                                android:orientation="horizontal"
+                                                android:weightSum="4">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="2"
+                                                    android:orientation="vertical">
+
+                                                    <TextView
+                                                        android:id="@+id/txt_honey_title"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="5dp"
+                                                        android:ellipsize="end"
+                                                        android:gravity="center|start"
+                                                        android:maxLines="1"
+                                                        android:text="Carela"
+                                                        android:textColor="@color/main"
+                                                        android:textSize="14sp"
+                                                        android:textStyle="bold" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="start"
+                                                        android:layout_marginTop="10dp"
+                                                        android:gravity="start|center"
+                                                        android:text="Starting Budget"
+                                                        android:textColor="@color/sub"
+                                                        android:textSize="12sp" />
+
+                                                    <TextView
+                                                        android:id="@+id/txtbudget_honey"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5dp"
+                                                        android:gravity="center|start"
+                                                        android:text="₹ 9999/-"
+                                                        android:textColor="@color/rs"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="2"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
+
+
+                                                    <Button
+                                                        android:id="@+id/btn_vmorehoney"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="25dp"
+                                                        android:layout_gravity="end"
+                                                        android:background="@drawable/roundbtn"
+                                                        android:gravity="center|bottom"
+                                                        android:padding="5dp"
+                                                        android:text="View More"
+                                                        android:textColor="@color/primary_light"
+                                                        android:textSize="12sp" />
+
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </android.support.v7.widget.CardView>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <android.support.v7.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="1dp"
+                                        app:cardBackgroundColor="#fcfcfc"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardElevation="3dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginBottom="10dp"
+                                            android:orientation="vertical"
+                                            android:weightSum="4">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1.5"
+                                                android:orientation="vertical">
+
+                                                <ImageView
+                                                    android:id="@+id/img_honeydestitwo"
+                                                    android:layout_width="300dp"
+                                                    android:layout_height="130dp"
+                                                    android:gravity="center"
+                                                    android:scaleType="fitXY"
+                                                    android:src="@drawable/download" />
+
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight="2.5"
+                                                android:orientation="horizontal"
+                                                android:weightSum="4">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="2"
+                                                    android:orientation="vertical">
+
+                                                    <TextView
+                                                        android:id="@+id/txt_honey_titletwo"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginTop="5dp"
+                                                        android:ellipsize="end"
+                                                        android:gravity="center|start"
+                                                        android:maxLines="1"
+                                                        android:text="Carela"
+                                                        android:textColor="@color/main"
+                                                        android:textSize="14sp"
+                                                        android:textStyle="bold" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="start"
+                                                        android:layout_marginTop="10dp"
+                                                        android:gravity="start|center"
+                                                        android:text="Starting Budget"
+                                                        android:textColor="@color/sub"
+                                                        android:textSize="12sp" />
+
+                                                    <TextView
+                                                        android:id="@+id/txtbudget_honeytwo"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="5dp"
+                                                        android:gravity="center|start"
+                                                        android:text="₹ 9999/-"
+                                                        android:textColor="@color/rs"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="2"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
+
+
+                                                    <Button
+                                                        android:id="@+id/btn_vmorehoneytwo"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="25dp"
+                                                        android:layout_gravity="end"
+                                                        android:background="@drawable/roundbtn"
+                                                        android:gravity="center|bottom"
+                                                        android:padding="5dp"
+                                                        android:text="View More"
+                                                        android:textColor="@color/primary_light"
+                                                        android:textSize="12sp" />
+
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </android.support.v7.widget.CardView>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+                        -->
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/honey_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffff"
+                            android:orientation="horizontal" />
+
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/cardview_honeymoon"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:visibility="gone"
+                            card_view:cardBackgroundColor="@color/white"
+                            card_view:cardCornerRadius="5dp"
+                            card_view:cardElevation="5dp">
+
+                            <TextView
+                                android:id="@+id/txt_msg_honey"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="15dp"
+                                android:text="Data Not Found"
+                                android:textSize="16sp" />
+
+
+                        </android.support.v7.widget.CardView>
+
+
+                        <!--
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="2"
+                                                    android:orientation="vertical">
+
+                                                    <android.support.v7.widget.CardView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_margin="1dp"
+                                                        app:cardBackgroundColor="#fcfcfc"
+                                                        app:cardCornerRadius="4dp"
+                                                        app:cardElevation="3dp">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginBottom="15dp"
+                                                            android:orientation="vertical"
+                                                            android:weightSum="4">
+
+
+                                                            <LinearLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_weight="3.9"
+                                                                android:orientation="vertical">
+
+                                                                <ImageView
+                                                                    android:id="@+id/img_honeydesti"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="110dp"
+                                                                    android:gravity="center"
+                                                                    android:scaleType="fitXY"
+                                                                    android:src="@drawable/download" />
+
+
+                                                            </LinearLayout>
+
+                                                            <LinearLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_margin="5dp"
+                                                                android:layout_marginBottom="10dp"
+                                                                android:layout_weight="0.1"
+                                                                android:orientation="horizontal"
+                                                                android:weightSum="4">
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent"
+                                                                    android:layout_weight="2.2"
+                                                                    android:orientation="vertical">
+
+                                                                    <TextView
+                                                                        android:id="@+id/txt_honey_title"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_gravity="center"
+                                                                        android:layout_marginTop="5dp"
+                                                                        android:ellipsize="end"
+                                                                        android:gravity="center|start"
+                                                                        android:maxLines="1"
+                                                                        android:text="Carela"
+                                                                        android:textColor="@color/main"
+                                                                        android:textSize="12sp"
+                                                                        android:textStyle="bold" />
+
+                                                                    <TextView
+
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_gravity="start"
+                                                                        android:layout_marginTop="8dp"
+                                                                        android:gravity="start|center"
+                                                                        android:text="Starting Budget"
+                                                                        android:textColor="@color/sub"
+                                                                        android:textSize="10sp" />
+
+                                                                    <TextView
+                                                                        android:id="@+id/txtbudget_honey"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_marginTop="5dp"
+                                                                        android:gravity="center|start"
+                                                                        android:text="₹ 9999/-"
+                                                                        android:textColor="@color/rs"
+                                                                        android:textSize="12sp" />
+                                                                </LinearLayout>
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent"
+                                                                    android:layout_gravity="bottom"
+                                                                    android:layout_weight="1.8"
+                                                                    android:gravity="bottom"
+                                                                    android:orientation="vertical">
+
+
+                                                                    <Button
+                                                                        android:id="@+id/btn_vmorehoney"
+                                                                        android:layout_width="80dp"
+                                                                        android:layout_height="25dp"
+                                                                        android:layout_gravity="end"
+                                                                        android:background="@drawable/roundbtn"
+                                                                        android:gravity="center"
+                                                                        android:padding="5dp"
+                                                                        android:text="View More"
+                                                                        android:textColor="@color/primary_light"
+                                                                        android:textSize="10dp" />
+
+
+                                                                </LinearLayout>
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+                                                    </android.support.v7.widget.CardView>
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:layout_weight="2"
+                                                    android:orientation="vertical">
+
+                                                    <android.support.v7.widget.CardView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_margin="1dp"
+                                                        app:cardBackgroundColor="#fcfcfc"
+                                                        app:cardCornerRadius="4dp"
+                                                        app:cardElevation="3dp">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginBottom="15dp"
+                                                            android:orientation="vertical"
+                                                            android:weightSum="4">
+
+
+                                                            <LinearLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_weight="3.9"
+                                                                android:orientation="vertical">
+
+                                                                <ImageView
+                                                                    android:id="@+id/img_honeydestitwo"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="110dp"
+                                                                    android:gravity="center"
+                                                                    android:scaleType="fitXY"
+                                                                    android:src="@drawable/download" />
+
+
+                                                            </LinearLayout>
+
+                                                            <LinearLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_margin="5dp"
+                                                                android:layout_marginBottom="10dp"
+                                                                android:layout_weight="0.1"
+                                                                android:orientation="horizontal"
+                                                                android:weightSum="4">
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent"
+                                                                    android:layout_weight="2.2"
+                                                                    android:orientation="vertical">
+
+                                                                    <TextView
+                                                                        android:id="@+id/txt_honey_titletwo"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_gravity="center"
+                                                                        android:layout_marginTop="5dp"
+                                                                        android:ellipsize="end"
+                                                                        android:gravity="center|start"
+                                                                        android:maxLines="1"
+                                                                        android:text="Carela"
+                                                                        android:textColor="@color/main"
+                                                                        android:textSize="12sp"
+                                                                        android:textStyle="bold" />
+
+                                                                    <TextView
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_gravity="start"
+                                                                        android:layout_marginTop="8dp"
+                                                                        android:gravity="start|center"
+                                                                        android:text="Starting Budget"
+                                                                        android:textColor="@color/sub"
+                                                                        android:textSize="10sp" />
+
+                                                                    <TextView
+                                                                        android:id="@+id/txtbudget_honeytwo"
+                                                                        android:layout_width="match_parent"
+                                                                        android:layout_height="wrap_content"
+                                                                        android:layout_marginTop="5dp"
+                                                                        android:gravity="center|start"
+                                                                        android:text="₹ 9999/-"
+                                                                        android:textColor="@color/rs"
+                                                                        android:textSize="12sp" />
+                                                                </LinearLayout>
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent"
+                                                                    android:layout_gravity="bottom"
+                                                                    android:layout_weight="1.8"
+                                                                    android:gravity="bottom"
+                                                                    android:orientation="vertical">
+
+
+                                                                    <Button
+                                                                        android:id="@+id/btn_vmorehoneytwo"
+                                                                        android:layout_width="80dp"
+                                                                        android:layout_height="25dp"
+                                                                        android:layout_gravity="end"
+                                                                        android:background="@drawable/roundbtn"
+                                                                        android:gravity="center"
+                                                                        android:padding="5dp"
+                                                                        android:text="View More"
+                                                                        android:textColor="@color/primary_light"
+                                                                        android:textSize="10dp" />
+
+
+                                                                </LinearLayout>
+                                                            </LinearLayout>
+                                                        </LinearLayout>
+                                                    </android.support.v7.widget.CardView>
+                                                </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgdesti"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/tour"/>
+
+
+        </LinearLayout>
+    -->
+
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<tabs>
+    <tab
+        icon="@drawable/ic_home"
+        id="@+id/home1" />
+    <tab
+        icon="@drawable/ic_search"
+        id="@+id/search" />
+    <tab
+        icon="@drawable/ic_new_feed"
+        id="@+id/login" />
+
+    <tab
+        icon="@drawable/ic_notification"
+        id="@+id/notifi" />
+    <tab
+        icon="@drawable/ic_menu"
+        id="@+id/menu" />
+
+</tabs>

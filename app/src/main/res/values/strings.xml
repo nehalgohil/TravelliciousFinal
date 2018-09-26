@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Travels</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="privacy">by signing up you agree to the T  \u0026 C and Privacy policy</string>
+    <string name="n">T  \u0026 C </string>
+    <string name="pri">Privacy policy</string>
+
+    <string name="my_text">This is an <u>underline</u>.</string>
+    <string name="signin" tools:ignore="StringEscaping">Dont have an account ? <u>Signup now</u></string>
+    <string name="signup" tools:ignore="StringEscaping">Already have an account ? <u>Login now</u></string>
+    <string name="text_with_bullet">Text with a \u2022</string>
+
+    <string name="lorem">\u2022 lorem ipsum is simply</string>
+    <string name="typesetting">\u2022 typesetting industry</string>
+    <string name="standard">\u2022 standard dummy text</string>
+    <string name="printer">\u2022 printer took a gallery of type</string>
+    <string name="type">\u2022 type specimon book</string>
+</resources>
